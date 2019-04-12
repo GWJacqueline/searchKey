@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+        />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <style>
+            form {
+                border-bottom: 1px solid #cecece;
+            }
+            /* 去除自带叉号样式 */
+            input::-webkit-search-cancel-button {
+                display: none;
+            }
+            input {
+                width: 100%;
+                height: 40px;
+                font-size: 24px;
+                outline: none;
+                -webkit-appearance: none;
+                line-height: 40px;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                border: none;
+                background: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>大家可以用手机试试能不能弹出搜索键盘呀~</h3>
+        <form id="formid" action="#">
+            <input
+                name="name"
+                id="search"
+                type="search"
+                placeholder="我是一个输入框"
+            />
+        </form>
+        <script>
+            !(function() {
+                document
+                    .getElementById("search")
+                    .addEventListener("keydown", function(e) {
+                        if (e.keyCode == "13") {
+                            alert("成功调用搜索框啦~");
+                        }
+                    });
+            })();
+        </script>
+    </body>
+</html>
